@@ -1,0 +1,21 @@
+@using BasketballStars.Models;
+
+<h1>All Players:</h1>
+
+<ol>
+@foreach (Player player in Model)
+{
+    <ul>
+        <li>First Name: @player.FirstName</li>
+        <li>Last Name: @player.LastName</li>
+        <li>Team: @player.Team</li>
+        @foreach (string position in player.PositionName)
+        {
+        <li>Position: @position</li>
+        }
+        
+    </ul>
+    <a href="/Players/Details/@(player.PlayerId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
