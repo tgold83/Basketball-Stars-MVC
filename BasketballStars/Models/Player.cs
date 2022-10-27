@@ -24,9 +24,9 @@ namespace BasketballStars.Models
       return playerList;
     }
 
-    public static Player GetDetails(int id)
+    public static Player GetDetails(int playerId)
     {
-      var apiCallTask = ApiHelper.GetPlayer(id);
+      var apiCallTask = ApiHelper.GetPlayer(playerId);
       var result = apiCallTask.Result;
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);

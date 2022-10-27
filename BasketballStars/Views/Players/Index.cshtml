@@ -1,4 +1,4 @@
-@using BasketballStars.Models;
+@using BasketballStars.Models
 
 <h1>All Players:</h1>
 
@@ -15,7 +15,7 @@
         }
         
     </ul>
-    <a href="/Players/Details/@(player.PlayerId)"><p>View Details</p></a>
+    <p>@Html.ActionLink("View Details", "Details", "Players", new{playerId = (int)player.PlayerId})</p>
     <br>
 }
 </ol>

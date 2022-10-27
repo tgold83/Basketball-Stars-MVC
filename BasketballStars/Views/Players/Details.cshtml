@@ -1,0 +1,15 @@
+@using BasketballStars.Models
+@model BasketballStars.Models.Player; 
+
+<h1>Player details:</h1>
+
+<ol>
+    <ul>
+        
+        
+        <li>First Name: @Html.DisplayFor(model => model.FirstName)</li>
+        <li>Last Name: @Html.DisplayFor(model => model.LastName)</li>
+        <li>Team: @Html.DisplayFor(model => model.Team)</li>
+        <li>Position: @Html.DisplayFor(model => model.PositionName)</li>
+    </ul>
+</ol>

@@ -6,7 +6,6 @@
 @foreach (Position position in Model)
 {
     <ul>
-        <li>ID: @position.PositionId</li>
         <li>Position: @position.PositionName</li>
     </ul>
     <a href="/Positions/Details/@(position.PositionId)"><p>View Details</p></a>

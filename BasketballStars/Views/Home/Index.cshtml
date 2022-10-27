@@ -2,7 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 
+@using BasketballStars.Models
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the list of the best Basketball players in the NBA!</h1>
+    <h5 class="display-4">@Html.ActionLink("See the top 10 NBA players", "Index", "Players")</h5>
+    <h5 class="display-4">@Html.ActionLink("See a list of game positions", "Index", "Positions")</h5>
+
 </div>

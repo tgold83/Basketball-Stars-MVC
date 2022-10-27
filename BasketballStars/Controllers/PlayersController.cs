@@ -16,5 +16,11 @@ namespace BasketballStars.Controllers
       var allPlayers = Player.GetPlayers();
       return View(allPlayers);
     }
+
+    public IActionResult Details(int playerId)
+    {
+      var playerDetails = Player.GetDetails(playerId);
+      return View(playerDetails);
+    }
   }
 }
