@@ -11,7 +11,7 @@ namespace BasketballStars.Models
     {
       RestClient playerClient = new RestClient("http://localhost:5004/api");
       playerClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(
-          EnvironmentVariables.ApiKey, "Bearer"
+          EnvironmentalVariables.ApiKey, "Bearer"
       );
       RestRequest playerRequest = new RestRequest($"players", Method.GET);
       var playerResponse = await playerClient.ExecuteTaskAsync(playerRequest);
@@ -22,7 +22,7 @@ namespace BasketballStars.Models
     {
       RestClient positionClient = new RestClient("http://localhost:5004/api");
       positionClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(
-          EnvironmentVariables.ApiKey, "Bearer"
+          EnvironmentalVariables.ApiKey, "Bearer"
       );
       RestRequest positionRequest = new RestRequest($"positions", Method.GET);
       var positionResponse = await positionClient.ExecuteTaskAsync(positionRequest);
@@ -33,7 +33,7 @@ namespace BasketballStars.Models
     {
       RestClient playerClient = new RestClient("http://localhost:5004/api");
       playerClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(
-          EnvironmentVariables.ApiKey, "Bearer"
+          EnvironmentalVariables.ApiKey, "Bearer"
       );
       RestRequest playerRequest = new RestRequest($"players/{id}", Method.GET);
       var playerResponse = await playerClient.ExecuteTaskAsync(playerRequest);
@@ -44,7 +44,7 @@ namespace BasketballStars.Models
     {
       RestClient positionClient = new RestClient("http://localhost:5004/api");
       positionClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(
-          EnvironmentVariables.ApiKey, "Bearer"
+          EnvironmentalVariables.ApiKey, "Bearer"
       );
       RestRequest positionRequest = new RestRequest($"positions/{id}", Method.GET);
       var positionResponse = await positionClient.ExecuteTaskAsync(positionRequest);
